@@ -68,4 +68,4 @@ merge_data  <- melt(data, id = id_labels, measure.vars = data_labels)
 # compute the mean of the data
 final_data   = dcast(merge_data, subject + Activity_Label ~ variable, fun = mean)
 
-write.table(final_data, file = "./final_data.txt")
+write.table(final_data, file = "./final_data.txt", row.name = F)
